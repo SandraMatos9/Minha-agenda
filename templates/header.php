@@ -1,5 +1,15 @@
 <?php
     include_once("config/url.php");
+    include_once("config/process.php");
+    //limpa a mensagem
+    if(isset($_SESSION['msg'])){
+        $printMsg = $_SESSION['msg'];
+        $_SESSION['msg'] ='';
+
+
+    }
+
+    include_once("config/connection.php");
 
 ?>
 
@@ -14,7 +24,7 @@
     <!--FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS -->
-    <link rel="stylesheet" href="<?= $BASE_URL ?>css/styles.css">
+    <link rel="stylesheet" href="<?= $BASE_URL ?>/css/styles.css">
 </head>
 <body>
     <header>
